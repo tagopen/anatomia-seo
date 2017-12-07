@@ -3590,6 +3590,7 @@
   -webkit-transition: all .15s ease-out;
   transition: all .15s ease-out;
   text-align: center;
+  cursor: pointer;
   z-index: 1;
 }
 
