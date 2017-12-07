@@ -1,0 +1,155 @@
+#modal__test.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal__test-title', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h4#modal__test-title.modal__heading.ts-heading Узнайте стоимость продвижения вашего сайта
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          +svg("close")(class="modal__close")
+      .modal-body
+        form.ts-form(method='POST', action='mail/mail.php')
+          .ts-tabs.modal__tabs(data-tabs='test-tabs')
+            .ts-tabs__item.ts-tabs__item--active
+              h5.ts-tabs__heading.ts-heading Есть ли у вас сайт?
+              .progressbar.js-progressbar
+                .progressbar__status
+                .progressbar__data
+                  span.progressbar__value 1
+                  | /
+                  span.progressbar__total 4
+              .ts-radio.ts-tabs__radio-group
+                .ts-radiobtns.ts-radio__item
+                  input.ts-radiobtns__control(id="radio-site-11", type='radio', name='test1[]', value='Да')
+                  label.ts-radiobtns__content(for='radio-site-11')
+                    span.ts-radiobtns__col.ts-radiobtns__col--auto
+                      img.ts-radiobtns__img.img-fluid(src='img/test-1.1.png', alt='img1')
+                    span.ts-radiobtns__col
+                      span.ts-radiobtns__heading.ts-title Да
+                .ts-radiobtns.ts-radio__item
+                  input.ts-radiobtns__control(id="radio-site-12", type='radio', name='test1[]', value='Нет')
+                  label.ts-radiobtns__content(for='radio-site-12')
+                    span.ts-radiobtns__col.ts-radiobtns__col--auto
+                      img.ts-radiobtns__img.img-fluid(src='img/test-1.2.png', alt='img2')
+                    span.ts-radiobtns__col
+                      span.ts-radiobtns__heading.ts-title Нет
+              .row.justify-content-end
+                .col-auto
+                  button.ts-btn.ts-btn--primary.ts-tabs__btn(type='button', data-tabs-control='next', data-tabs-toggle='test-tabs') Далее
+
+            .ts-tabs__item
+              h5.ts-tabs__heading.ts-heading Сайт многостраничный?
+              .progressbar.js-progressbar
+                .progressbar__status
+                .progressbar__data
+                  span.progressbar__value 2
+                  | /
+                  span.progressbar__total 4
+              .ts-radio.ts-tabs__radio-group
+                .ts-radiobtns.ts-radio__item
+                  input.ts-radiobtns__control(id="radio-site-21", type='radio', name='test2[]', value='Да')
+                  label.ts-radiobtns__content(for='radio-site-21')
+                    span.ts-radiobtns__col.ts-radiobtns__col--auto
+                      img.ts-radiobtns__img.img-fluid(src='img/test-2.1.png', alt='img1')
+                    span.ts-radiobtns__col
+                      span.ts-radiobtns__heading.ts-title Да
+                .ts-radiobtns.ts-radio__item
+                  input.ts-radiobtns__control(id="radio-site-22", type='radio', name='test2[]', value='Нет')
+                  label.ts-radiobtns__content(for='radio-site-22')
+                    span.ts-radiobtns__col.ts-radiobtns__col--auto
+                      img.ts-radiobtns__img.img-fluid(src='img/test-2.2.png', alt='img2')
+                    span.ts-radiobtns__col
+                      span.ts-radiobtns__heading.ts-title Нет
+                      span.ts-radiobtns__descr.ts-descr ( одностраничный ) 
+              .row.justify-content-end
+                .col-auto
+                  a.ts-btn.ts-btn--primary.ts-tabs__btn(href='#', data-tabs-control='prev', data-tabs-toggle='test-tabs') Назад
+                  button.ts-btn.ts-btn--primary.ts-tabs__btn(type='button', data-tabs-control='next', data-tabs-toggle='test-tabs') Далее
+
+            .ts-tabs__item
+              h5.ts-tabs__heading.ts-heading Выберите тип вашего сайта
+              .progressbar.js-progressbar
+                .progressbar__status
+                .progressbar__data
+                  span.progressbar__value 3
+                  | /
+                  span.progressbar__total 4
+              .ts-radio.ts-tabs__radio-group
+                .ts-radiobtns.ts-radio__item
+                  input.ts-radiobtns__control(id="radio-site-31", type='radio', name='test3[]', value='Информационный')
+                  label.ts-radiobtns__content(for='radio-site-31')
+                    span.ts-radiobtns__col.ts-radiobtns__col--auto
+                      img.ts-radiobtns__img.img-fluid(src='img/test-3.1.png', alt='img31')
+                    span.ts-radiobtns__col
+                      span.ts-radiobtns__heading.ts-title.ts-tittle--sm Информационный
+                      span.ts-radiobtns__descr.ts-descr.ts-descr--sm ( для заработка на контекстной рекламе )
+                .ts-radiobtns.ts-radio__item
+                  input.ts-radiobtns__control(id="radio-site-32", type='radio', name='test3[]', value='Развлекательный')
+                  label.ts-radiobtns__content(for='radio-site-32')
+                    span.ts-radiobtns__col.ts-radiobtns__col--auto
+                      img.ts-radiobtns__img.img-fluid(src='img/test-3.2.png', alt='img32')
+                    span.ts-radiobtns__col
+                      span.ts-radiobtns__heading.ts-title Развлекательный
+                      span.ts-radiobtns__descr.ts-descr ( кино, игры и прочее )
+                .ts-radiobtns.ts-radio__item
+                  input.ts-radiobtns__control(id="radio-site-33", type='radio', name='test3[]', value='Нет')
+                  label.ts-radiobtns__content(for='radio-site-33')
+                    span.ts-radiobtns__col.ts-radiobtns__col--auto
+                      img.ts-radiobtns__img.img-fluid(src='img/test-3.3.png', alt='img33')
+                    span.ts-radiobtns__col
+                      span.ts-radiobtns__heading.ts-title Интернет магазин
+                      span.ts-radiobtns__descr.ts-descr ( ваши товары и услуги пользователи могут купить через корзину на сайте )
+                .ts-radiobtns.ts-radio__item
+                  input.ts-radiobtns__control(id="radio-site-34", type='radio', name='test3[]', value='Нет')
+                  label.ts-radiobtns__content(for='radio-site-34')
+                    span.ts-radiobtns__col.ts-radiobtns__col--auto
+                      img.ts-radiobtns__img.img-fluid(src='img/test-3.4.png', alt='img34')
+                    span.ts-radiobtns__col
+                      span.ts-radiobtns__heading.ts-title Корпоративный сайт
+                      span.ts-radiobtns__descr.ts-descr ( ваши товары и услуги пользователи не покупают через корзину на сайте )
+              .row.justify-content-between
+                .col-auto
+                  a.ts-tabs__link.ts-link
+                    img.ts-link__img(src='img/smiled.png', alt='')
+                .col-auto
+                  a.ts-btn.ts-btn--primary.ts-tabs__btn(href='#', data-tabs-control='prev', data-tabs-toggle='test-tabs') Назад
+                  button.ts-btn.ts-btn--primary.ts-tabs__btn(type='button', data-tabs-control='next', data-tabs-toggle='test-tabs') Далее
+
+            .ts-tabs__item
+              h5.ts-tabs__heading.ts-heading Вы уже применяли СЕО для этого сайта?
+              .progressbar.js-progressbar
+                .progressbar__status
+                .progressbar__data
+                  span.progressbar__value 4
+                  | /
+                  span.progressbar__total 4
+              .ts-radio.ts-tabs__radio-group
+                .ts-radiobtns.ts-radio__item
+                  input.ts-radiobtns__control(id="radio-site-41", type='radio', name='test4[]', value='Да')
+                  label.ts-radiobtns__content(for='radio-site-41')
+                    span.ts-radiobtns__col.ts-radiobtns__col--auto
+                      img.ts-radiobtns__img.img-fluid(src='img/test-4.1.png', alt='img41')
+                    span.ts-radiobtns__col
+                      span.ts-radiobtns__heading.ts-title Да
+                .ts-radiobtns.ts-radio__item
+                  input.ts-radiobtns__control(id="radio-site-42", type='radio', name='test4[]', value='Нет')
+                  label.ts-radiobtns__content(for='radio-site-42')
+                    span.ts-radiobtns__col.ts-radiobtns__col--auto
+                      img.ts-radiobtns__img.img-fluid(src='img/test-4.2.png', alt='img42')
+                    span.ts-radiobtns__col
+                      span.ts-radiobtns__heading.ts-title Нет
+                      span.ts-radiobtns__descr.ts-descr ( одностраничный ) 
+              .row.justify-content-end
+                .col-auto
+                  a.ts-btn.ts-btn--primary.ts-tabs__btn(href='#', data-tabs-control='prev', data-tabs-toggle='test-tabs') Назад
+                  button.ts-btn.ts-btn--default.ts-tabs__btn(type='button', data-tabs-control='next', data-tabs-toggle='test-tabs') узнать стоимость
+                    img.ts-btn__icon(src="img/arrow.png", alt="")
+            .ts-tabs__item
+              h5.ts-tabs__heading.ts-heading Отлично. Последний шаг!
+              p.ts-tabs__sub-heading.ts-sub-heading Заполните форму ниже для получения результатов теста
+              fieldset.ts-form-group
+                input.ts-form-control(type='text', placeholder='ваше имя', name='name', required)
+              fieldset.ts-form-group
+                input.ts-form-control(type='email', placeholder='ваш email', name='email', required)
+              .row.justify-content-center
+                .col-auto
+                  button.ts-btn.ts-btn--default.ts-tabs__btn(name='form', value='Тест', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Форма отправляется...") получить результаты
+                    img.ts-btn__icon(src="img/arrow.png", alt="")

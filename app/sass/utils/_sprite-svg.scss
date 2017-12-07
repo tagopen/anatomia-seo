@@ -1,0 +1,14 @@
+// close
+$svg-close-name: "close";
+$svg-close-width: em(32);
+$svg-close-height: em(32);
+$svg-close-offset-x: px;
+$svg-close-offset-y: px;
+$svg-close-image: "../img/sprite.svg";
+$svg-close: ( "close", em(32), em(32), px, px, "../img/sprite.svg" );
+
+
+$svg-spritesheet-width: px;
+$svg-spritesheet-height: px;
+$svg-spritesheet-image: "../img/sprite.svg";
+$svg-spritesheet-sprites: ( $svg-close,  );

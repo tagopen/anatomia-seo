@@ -48,12 +48,21 @@ html.html(lang='ru' prefix='og: http://ogp.me/ns#')
     
     // build:css css/bundle.min.css
     
-    // Fonts CSS
-    link(rel='stylesheet' href='css/fonts.css')
-    // Bootstrap CSS
-    link(rel='stylesheet' href='css/bootstrap.css')
-    // Font-Awesome CSS
-    link(rel='stylesheet' href='css/font-awesome.css')
+    link(rel='alternate', href='http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo//', hreflang='x-default')
+
+    link(href='http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/style2.css', rel='stylesheet')
+    link(href='http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/normalize.css', rel='stylesheet')
+    link(rel='stylesheet', href='http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/libs/slick/slick.css')
+    link(rel='stylesheet', href='http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/font-awesome.min.css')
+    link(href='http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/bootstrap.css', rel='stylesheet')
+    link(rel='stylesheet', href='http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/libs/magnific-popup/magnific-popup.css')
+    link(rel='stylesheet', href='http://ianlunn.github.io/Hover/css/hover.css')
+    link(href='http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/style.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,400', rel='stylesheet')
+    link(href='http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/media.css', rel='stylesheet')
+    link(href='http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/custom.css', rel='stylesheet')
+    
+
     block styles
     // Custom CSS 
     link(rel='stylesheet' href='css/style.css')
@@ -76,19 +85,14 @@ html.html(lang='ru' prefix='og: http://ogp.me/ns#')
 
     // build:js js/bundle.min.js
 
-    // Popper JavaScript
-    script(src='js/popper.js')
-    // jQuery
-    script(src='js/jquery.js')
+    // jQuery  
+    script(type='text/javascript', src='http://www.anatomia-seo.ru/wp-includes/js/jquery/jquery.js?ver=1.12.4')
+    script(type='text/javascript', src='http://www.anatomia-seo.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1')
+    
     // Bootstrap JavaScript
-    script(src='js/bootstrap.js')
-    // Old browsers reject JavaScript
-    script(src='js/jquery.reject.js')
-    // Wowjs animation JavaScript
-    script(src='js/wow.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')
+
     block scripts
-    //- Slick-Slider JavaScript
-    //- script(src='js/slick.js')
     // Custom JavaScript
     script(src='js/main.js')
 

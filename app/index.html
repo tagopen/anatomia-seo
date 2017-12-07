@@ -35,36 +35,180 @@
     <meta name="twitter:description" content="My Site is cool"/>
     <meta name="twitter:image" content="/img/logo/microformat.png"/>
     <!-- build:css css/bundle.min.css-->
-    <!-- Fonts CSS-->
-    <link rel="stylesheet" href="css/fonts.css">
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <!-- Font-Awesome CSS-->
-    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="alternate" href="http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo//" hreflang="x-default">
+    <link href="http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/style2.css?v=1512621857216" rel="stylesheet">
+    <link href="http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/normalize.css?v=1512621857216" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/libs/slick/slick.css?v=1512621857216">
+    <link rel="stylesheet" href="http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/font-awesome.min.css?v=1512621857216">
+    <link href="http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/bootstrap.css?v=1512621857216" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/libs/magnific-popup/magnific-popup.css?v=1512621857216">
+    <link rel="stylesheet" href="http://ianlunn.github.io/Hover/css/hover.css?v=1512621857216">
+    <link href="http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/style.css?v=1512621857216" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link href="http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/media.css?v=1512621857216" rel="stylesheet">
+    <link href="http://www.anatomia-seo.ru/wp-content/themes/anatomiaseo/css/custom.css?v=1512621857216" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1512621857216">
     <!-- endbuild-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://--><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js?v=1512621857216"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js?v=1512621857216"></script>
 <![endif]-->
   </head>
   <body class="body">
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-24">
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal__test">Launch demo modal</button>
+          </div>
+        </div>
+      </div>
+    </header>
     <main class="main">
     </main>
     <div class="footer"></div>
+    <div class="modal fade" id="modal__test" tabindex="-1" role="dialog" aria-labelledby="modal__test-title" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal__heading ts-heading" id="modal__test-title">Узнайте стоимость продвижения вашего сайта</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="svg svg--close modal__close" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img">
+                <use xlink:href="img/sprite.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="ts-form" method="POST" action="mail/mail.php">
+              <div class="ts-tabs modal__tabs" data-tabs="test-tabs">
+                <div class="ts-tabs__item ts-tabs__item--active">
+                  <h5 class="ts-tabs__heading ts-heading">Есть ли у вас сайт?</h5>
+                  <div class="progressbar js-progressbar">
+                    <div class="progressbar__status"></div>
+                    <div class="progressbar__data"><span class="progressbar__value">1</span>/<span class="progressbar__total">4</span></div>
+                  </div>
+                  <div class="ts-radio ts-tabs__radio-group">
+                    <div class="ts-radiobtns ts-radio__item">
+                      <input class="ts-radiobtns__control" id="radio-site-11" type="radio" name="test1[]" value="Да">
+                      <label class="ts-radiobtns__content" for="radio-site-11"><span class="ts-radiobtns__col ts-radiobtns__col--auto"><img class="ts-radiobtns__img img-fluid" src="img/test-1.1.png" alt="img1"></span><span class="ts-radiobtns__col"><span class="ts-radiobtns__heading ts-title">Да</span></span></label>
+                    </div>
+                    <div class="ts-radiobtns ts-radio__item">
+                      <input class="ts-radiobtns__control" id="radio-site-12" type="radio" name="test1[]" value="Нет">
+                      <label class="ts-radiobtns__content" for="radio-site-12"><span class="ts-radiobtns__col ts-radiobtns__col--auto"><img class="ts-radiobtns__img img-fluid" src="img/test-1.2.png" alt="img2"></span><span class="ts-radiobtns__col"><span class="ts-radiobtns__heading ts-title">Нет</span></span></label>
+                    </div>
+                  </div>
+                  <div class="row justify-content-end">
+                    <div class="col-auto">
+                      <button class="ts-btn ts-btn--primary ts-tabs__btn" type="button" data-tabs-control="next" data-tabs-toggle="test-tabs">Далее</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="ts-tabs__item">
+                  <h5 class="ts-tabs__heading ts-heading">Сайт многостраничный?</h5>
+                  <div class="progressbar js-progressbar">
+                    <div class="progressbar__status"></div>
+                    <div class="progressbar__data"><span class="progressbar__value">2</span>/<span class="progressbar__total">4</span></div>
+                  </div>
+                  <div class="ts-radio ts-tabs__radio-group">
+                    <div class="ts-radiobtns ts-radio__item">
+                      <input class="ts-radiobtns__control" id="radio-site-21" type="radio" name="test2[]" value="Да">
+                      <label class="ts-radiobtns__content" for="radio-site-21"><span class="ts-radiobtns__col ts-radiobtns__col--auto"><img class="ts-radiobtns__img img-fluid" src="img/test-2.1.png" alt="img1"></span><span class="ts-radiobtns__col"><span class="ts-radiobtns__heading ts-title">Да</span></span></label>
+                    </div>
+                    <div class="ts-radiobtns ts-radio__item">
+                      <input class="ts-radiobtns__control" id="radio-site-22" type="radio" name="test2[]" value="Нет">
+                      <label class="ts-radiobtns__content" for="radio-site-22"><span class="ts-radiobtns__col ts-radiobtns__col--auto"><img class="ts-radiobtns__img img-fluid" src="img/test-2.2.png" alt="img2"></span><span class="ts-radiobtns__col"><span class="ts-radiobtns__heading ts-title">Нет</span><span class="ts-radiobtns__descr ts-descr">( одностраничный ) </span></span></label>
+                    </div>
+                  </div>
+                  <div class="row justify-content-end">
+                    <div class="col-auto"><a class="ts-btn ts-btn--primary ts-tabs__btn" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">Назад</a>
+                      <button class="ts-btn ts-btn--primary ts-tabs__btn" type="button" data-tabs-control="next" data-tabs-toggle="test-tabs">Далее</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="ts-tabs__item">
+                  <h5 class="ts-tabs__heading ts-heading">Выберите тип вашего сайта</h5>
+                  <div class="progressbar js-progressbar">
+                    <div class="progressbar__status"></div>
+                    <div class="progressbar__data"><span class="progressbar__value">3</span>/<span class="progressbar__total">4</span></div>
+                  </div>
+                  <div class="ts-radio ts-tabs__radio-group">
+                    <div class="ts-radiobtns ts-radio__item">
+                      <input class="ts-radiobtns__control" id="radio-site-31" type="radio" name="test3[]" value="Информационный">
+                      <label class="ts-radiobtns__content" for="radio-site-31"><span class="ts-radiobtns__col ts-radiobtns__col--auto"><img class="ts-radiobtns__img img-fluid" src="img/test-3.1.png" alt="img31"></span><span class="ts-radiobtns__col"><span class="ts-radiobtns__heading ts-title ts-tittle--sm">Информационный</span><span class="ts-radiobtns__descr ts-descr ts-descr--sm">( для заработка на контекстной рекламе )</span></span></label>
+                    </div>
+                    <div class="ts-radiobtns ts-radio__item">
+                      <input class="ts-radiobtns__control" id="radio-site-32" type="radio" name="test3[]" value="Развлекательный">
+                      <label class="ts-radiobtns__content" for="radio-site-32"><span class="ts-radiobtns__col ts-radiobtns__col--auto"><img class="ts-radiobtns__img img-fluid" src="img/test-3.2.png" alt="img32"></span><span class="ts-radiobtns__col"><span class="ts-radiobtns__heading ts-title">Развлекательный</span><span class="ts-radiobtns__descr ts-descr">( кино, игры и прочее )</span></span></label>
+                    </div>
+                    <div class="ts-radiobtns ts-radio__item">
+                      <input class="ts-radiobtns__control" id="radio-site-33" type="radio" name="test3[]" value="Нет">
+                      <label class="ts-radiobtns__content" for="radio-site-33"><span class="ts-radiobtns__col ts-radiobtns__col--auto"><img class="ts-radiobtns__img img-fluid" src="img/test-3.3.png" alt="img33"></span><span class="ts-radiobtns__col"><span class="ts-radiobtns__heading ts-title">Интернет магазин</span><span class="ts-radiobtns__descr ts-descr">( ваши товары и услуги пользователи могут купить через корзину на сайте )</span></span></label>
+                    </div>
+                    <div class="ts-radiobtns ts-radio__item">
+                      <input class="ts-radiobtns__control" id="radio-site-34" type="radio" name="test3[]" value="Нет">
+                      <label class="ts-radiobtns__content" for="radio-site-34"><span class="ts-radiobtns__col ts-radiobtns__col--auto"><img class="ts-radiobtns__img img-fluid" src="img/test-3.4.png" alt="img34"></span><span class="ts-radiobtns__col"><span class="ts-radiobtns__heading ts-title">Корпоративный сайт</span><span class="ts-radiobtns__descr ts-descr">( ваши товары и услуги пользователи не покупают через корзину на сайте )</span></span></label>
+                    </div>
+                  </div>
+                  <div class="row justify-content-between">
+                    <div class="col-auto"><a class="ts-tabs__link ts-link"><img class="ts-link__img" src="img/smiled.png" alt=""></a></div>
+                    <div class="col-auto"><a class="ts-btn ts-btn--primary ts-tabs__btn" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">Назад</a>
+                      <button class="ts-btn ts-btn--primary ts-tabs__btn" type="button" data-tabs-control="next" data-tabs-toggle="test-tabs">Далее</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="ts-tabs__item">
+                  <h5 class="ts-tabs__heading ts-heading">Вы уже применяли СЕО для этого сайта?</h5>
+                  <div class="progressbar js-progressbar">
+                    <div class="progressbar__status"></div>
+                    <div class="progressbar__data"><span class="progressbar__value">4</span>/<span class="progressbar__total">4</span></div>
+                  </div>
+                  <div class="ts-radio ts-tabs__radio-group">
+                    <div class="ts-radiobtns ts-radio__item">
+                      <input class="ts-radiobtns__control" id="radio-site-41" type="radio" name="test4[]" value="Да">
+                      <label class="ts-radiobtns__content" for="radio-site-41"><span class="ts-radiobtns__col ts-radiobtns__col--auto"><img class="ts-radiobtns__img img-fluid" src="img/test-4.1.png" alt="img41"></span><span class="ts-radiobtns__col"><span class="ts-radiobtns__heading ts-title">Да</span></span></label>
+                    </div>
+                    <div class="ts-radiobtns ts-radio__item">
+                      <input class="ts-radiobtns__control" id="radio-site-42" type="radio" name="test4[]" value="Нет">
+                      <label class="ts-radiobtns__content" for="radio-site-42"><span class="ts-radiobtns__col ts-radiobtns__col--auto"><img class="ts-radiobtns__img img-fluid" src="img/test-4.2.png" alt="img42"></span><span class="ts-radiobtns__col"><span class="ts-radiobtns__heading ts-title">Нет</span><span class="ts-radiobtns__descr ts-descr">( одностраничный ) </span></span></label>
+                    </div>
+                  </div>
+                  <div class="row justify-content-end">
+                    <div class="col-auto"><a class="ts-btn ts-btn--primary ts-tabs__btn" href="#" data-tabs-control="prev" data-tabs-toggle="test-tabs">Назад</a>
+                      <button class="ts-btn ts-btn--default ts-tabs__btn" type="button" data-tabs-control="next" data-tabs-toggle="test-tabs">узнать стоимость<img class="ts-btn__icon" src="img/arrow.png" alt=""></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="ts-tabs__item">
+                  <h5 class="ts-tabs__heading ts-heading">Отлично. Последний шаг!</h5>
+                  <p class="ts-tabs__sub-heading ts-sub-heading">Заполните форму ниже для получения результатов теста</p>
+                  <fieldset class="ts-form-group">
+                    <input class="ts-form-control" type="text" placeholder="ваше имя" name="name" required>
+                  </fieldset>
+                  <fieldset class="ts-form-group">
+                    <input class="ts-form-control" type="email" placeholder="ваш email" name="email" required>
+                  </fieldset>
+                  <div class="row justify-content-center">
+                    <div class="col-auto">
+                      <button class="ts-btn ts-btn--default ts-tabs__btn" name="form" value="Тест" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Форма отправляется...">получить результаты<img class="ts-btn__icon" src="img/arrow.png" alt=""></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- build:js js/bundle.min.js-->
-    <!-- Tether JavaScript-->
-    <script src="js/tether.js"></script>
-    <!-- jQuery-->
-    <script src="js/jquery.js"></script>
+    <!-- jQuery  -->
+    <script type="text/javascript" src="http://www.anatomia-seo.ru/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+    <script type="text/javascript" src="http://www.anatomia-seo.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
     <!-- Bootstrap JavaScript-->
-    <script src="js/bootstrap.js"></script>
-    <!-- Old browsers reject JavaScript-->
-    <script src="js/jquery.reject.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <!-- Custom JavaScript-->
-    <script src="js/main.js"></script>
+    <script src="js/main.js&v=1512621857216"></script>
     <!-- endbuild-->
   </body>
 </html>
