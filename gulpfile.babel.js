@@ -75,11 +75,7 @@ gulp.task('sass', () => {
 
 gulp.task('scripts', () => {
   return gulp.src([
-      'node_modules/popper.js/dist/umd/popper.js',
-      'node_modules/bootstrap/dist/js/bootstrap.js',
-      'node_modules/jquery/dist/jquery.js',
-      'node_modules/bootstrap-validator/dist/validator.js',
-      'node_modules/wowjs/dist/wow.js',
+    'node_modules/tether/dist/js/tether.js',
       //'node_modules/onepage-scroll/jquery.onepage-scroll.js',
       //'node_modules/jquery.cookie/jquery.cookie.js',
       //'node_modules/matchHeight/dist/jquery.matchHeight.js',
@@ -114,7 +110,7 @@ gulp.task('pug', () => {
       basedir: path.src.pug,
       pretty: true
     }))
-    .pipe($.htmlVersion(htmlVersionOptions))
+    //.pipe($.htmlVersion(htmlVersionOptions))
     .pipe(gulp.dest(path.src.html));
 });
 
