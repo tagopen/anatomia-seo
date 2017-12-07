@@ -3,8 +3,8 @@
     .modal-content.modal-content--transparent
       .modal-header.modal-header--noborder
         h4#modal__test-title.modal__heading.ts-heading Узнайте стоимость продвижения вашего сайта
-        button.close(type='button', data-dismiss='modal', aria-label='Close')
-          +svg("close")(class="modal__close")
+        button.close.modal__close(type='button', data-dismiss='modal', aria-label='Close')
+          +svg("close")(class="close__icon")
       .modal-body.modal-body--white
         .container-fluid
           .row.justify-content-center
@@ -37,7 +37,7 @@
                             span.ts-radiobtns__heading.ts-title Нет
                     .container-fluid
                       .row.justify-content-end
-                        .col-auto
+                        .col-24
                           button.ts-btn.ts-btn--primary.ts-tabs__btn(type='button', data-tabs-control='next') Далее
 
                   .ts-tabs__item
@@ -67,7 +67,7 @@
                             span.ts-radiobtns__descr.ts-descr ( одностраничный ) 
                     .container-fluid
                       .row.justify-content-end.align-items-center
-                        .col-auto
+                        .col-24
                           button.ts-btn.ts-btn--primary.ts-tabs__btn(type='button', data-tabs-control='next') Далее
 
                   .ts-tabs__item
@@ -114,11 +114,11 @@
                             span.ts-radiobtns__descr.ts-descr.ts-descr--sm ( ваши товары и услуги пользователи не покупают через корзину на сайте )
                     .container-fluid
                       .row.justify-content-between.align-items-center
-                        .col
+                        .col-24.col-md-auto
                           a.ts-tabs__link.ts-link(href="#")
                             img.ts-link__icon(src='img/confused.png', alt='')
                             | Я незнаю какой у меня тип сайта 
-                        .col-auto
+                        .col-24.col-md-auto
                           button.ts-btn.ts-btn--primary.ts-tabs__btn(type='button', data-tabs-control='next') Далее
 
                   .ts-tabs__item
@@ -148,7 +148,7 @@
                             span.ts-radiobtns__descr.ts-descr ( одностраничный ) 
                     .container-fluid
                       .row.justify-content-end.align-items-center
-                        .col-auto
+                        .col-24
                           button.ts-btn.ts-btn--secondary.ts-tabs__btn(type='button', data-tabs-control='next') узнать стоимость
                             img.ts-btn__icon(src="img/arrow.png", alt="")
                   .ts-tabs__item
@@ -163,6 +163,6 @@
                           input.ts-form-control(type='email', placeholder='ваш email', name='email', required)
                     .container-fluid
                       .row.justify-content-center
-                        .col-auto
+                        .col-24
                           button.ts-btn.ts-btn--default.ts-tabs__btn(name='form', value='Тест', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Форма отправляется...") получить результаты
                             img.ts-btn__icon(src="img/arrow.png", alt="")

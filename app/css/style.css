@@ -3427,6 +3427,13 @@
   margin: 0 15px 0 0;
 }
 
+.modal__close {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
 .ts-tabs {
   overflow: hidden;
 }
@@ -3806,6 +3813,10 @@
 @media only screen and (min-width: 768px) {
   .ts-btn--default {
     padding: 22px 45px;
+  }
+  .ts-heading {
+    font-size: 25px;
+    line-height: 27px;
   }
   .ts-tabs__heading {
     margin-bottom: 45px;
