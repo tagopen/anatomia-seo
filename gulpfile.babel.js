@@ -76,6 +76,7 @@ gulp.task('sass', () => {
 gulp.task('scripts', () => {
   return gulp.src([
     'node_modules/tether/dist/js/tether.js',
+    'node_modules/bootstrap-validator/dist/validator.js',
       //'node_modules/onepage-scroll/jquery.onepage-scroll.js',
       //'node_modules/jquery.cookie/jquery.cookie.js',
       //'node_modules/matchHeight/dist/jquery.matchHeight.js',

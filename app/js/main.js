@@ -69,6 +69,7 @@
     init: function() {
       this.initTabs();
       this.addListener();
+      this.sendForm();
     },
 
     addListener: function() {
@@ -168,6 +169,73 @@
       $el.find(PROGRESSBAR_VALUE).html(value);
       $el.find(PROGRESSBAR_STATUS_SEL).css({width: percentage + '%'});
     },
+    sendForm: function() {
+
+      $('.js-form').validator({focus: false}).on('submit', function (e) {
+        var $form = $(this);
+        if (e.isDefaultPrevented()) {
+          // handle the invalid form...
+        } else {
+          e.preventDefault();
+          $form.find("[type=submit]").prop("disabled", true).button('loading'); //prevent submit behaviour and display preloading
+
+          var url =     $form.attr('action');
+          var data =    new FormData($form[0]);
+          var form =    $form.find("[type=submit]").val();
+
+          data.append("form", form);
+
+          $.ajax(url, {
+            type: 'post',
+            data: data,
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            cache: false,
+            success: function(data) {
+              // Success message
+
+              if (data.error) {
+                // Fail message
+                $form.find('.success').html("<div class='alert alert-danger'>");
+                $form.find('.success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                  .append("</button>");
+                $form.find('.success > .alert-danger').append("<strong>" + data.error);
+                $form.find('.success > .alert-danger').append('</div>');
+              } else if (data.message) {
+                $form.find('.success').html("<div class='alert alert-success'>");
+                $form.find('.success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                  .append("</button>");
+                $form.find('.success > .alert-success')
+                  .append("<strong>Cообщение успешно отправлено.</strong>");
+                $form.find('.success > .alert-success')
+                  .append('</div>');
+                // remove prevent submit behaviour and disable preloading
+                //document.location.href="./success.html";
+                //clear all fields
+                $form.trigger("reset");
+              }
+
+              $form.find("[type=submit]").prop("disabled", false).button('reset');  
+            },
+            error: function() {
+              // Fail message
+              $form.find('.success').html("<div class='alert alert-danger'>");
+              $form.find('.success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                .append("</button>");
+              $form.find('.success > .alert-danger').append("<strong>Письмо не отправлено. Пожалуйста, проверьте ваше интернет соединения и попробуйте еще раз!");
+              $form.find('.success > .alert-danger').append('</div>');
+
+              // remove prevent submit behaviour and disable preloading
+              $form.find("[type=submit]").prop("disabled", false).button('reset'); 
+
+              //clear all fields
+              //$form.trigger("reset");
+            },
+          });
+        }
+      }); 
+    }
   };
 
   $(function() {

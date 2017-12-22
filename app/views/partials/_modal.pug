@@ -9,7 +9,7 @@
         .container-fluid
           .row.justify-content-center
             .col-12.col-lg-10
-              form.ts-form(method='POST', action='mail/mail.php')
+              form.ts-form.js-form(method='POST', action='mail/mail.php')
                 .ts-tabs.modal__tabs(data-target="tabs")
                   .ts-tabs__item.ts-tabs__item--active
                     h5.ts-tabs__heading.ts-heading Есть ли у вас сайт?
@@ -164,5 +164,6 @@
                     .container-fluid
                       .row.justify-content-center
                         .col-24
+                          .success
                           button.ts-btn.ts-btn--default.ts-tabs__btn(name='form', value='Тест', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Форма отправляется...") получить результаты
                             img.ts-btn__icon(src="img/arrow.png", alt="")

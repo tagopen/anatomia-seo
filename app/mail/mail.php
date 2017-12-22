@@ -94,64 +94,54 @@
     array_push($data, $stack);
   }
 
-  if ( (!empty($_POST["method"])) && (isset($_POST["method"])) ) {
-    $post["user_method"] = $_POST["method"];
-    $stack = array(
-      "key"   => "Как связаться: ",
-      "value" => $post["user_method"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( (!empty($_POST["time"])) && (isset($_POST["time"])) ) {
-    $post["user_time"] = $_POST["time"];
-    $stack = array(
-      "key"   => "Удобное время: ",
-      "value" => $post["user_time"]
-    );
-    array_push($data, $stack);
-  }
-
-  if ( !empty($_POST["period"])  && (isset($_POST["period"])) ) {
-    if (is_array($_POST['period'])) {
-      $post["period"] = implode(", ", $_POST["period"]);
+  if ( !empty($_POST["test1"])  && (isset($_POST["test1"])) ) {
+    if (is_array($_POST['test1'])) {
+      $post["user_test1"] = implode(", ", $_POST["test1"]);
     } else {
-      $post["period"] = $_POST["period"];
+      $post["user_test1"] = $_POST["test1"];
     }
     $stack = array(
-      "key"   => "Когда позвонить: ",
-      "value" => $post["period"]
+      "key"   => "Есть ли у вас сайт: ",
+      "value" => $post["user_test1"]
     );
     array_push($data, $stack);
   }
 
-  if ( !empty($_POST["material"])  && (isset($_POST["material"])) ) {
-    if (is_array($_POST['material'])) {
-      $post["material"] = implode(", ", $_POST["material"]);
+  if ( !empty($_POST["test2"])  && (isset($_POST["test2"])) ) {
+    if (is_array($_POST['test2'])) {
+      $post["user_test2"] = implode(", ", $_POST["test2"]);
     } else {
-      $post["material"] = $_POST["material"];
+      $post["user_test2"] = $_POST["test2"];
     }
     $stack = array(
-      "key"   => "Чем зашивать: ",
-      "value" => $post["material"]
+      "key"   => "Сайт многостраничный: ",
+      "value" => $post["user_test2"]
     );
     array_push($data, $stack);
   }
 
-  if ( (!empty($_POST["range1"])) && (isset($_POST["range1"])) ) {
-    $post["user_range1"] = $_POST["range1"];
+  if ( !empty($_POST["test3"])  && (isset($_POST["test3"])) ) {
+    if (is_array($_POST['test3'])) {
+      $post["user_test3"] = implode(", ", $_POST["test3"]);
+    } else {
+      $post["user_test3"] = $_POST["test3"];
+    }
     $stack = array(
-      "key"   => "Длина ворот: ",
-      "value" => $post["user_range1"]
+      "key"   => "Выберите тип вашего сайта: ",
+      "value" => $post["user_test3"]
     );
     array_push($data, $stack);
   }
 
-  if ( (!empty($_POST["range2"])) && (isset($_POST["range2"])) ) {
-    $post["user_range2"] = $_POST["range2"];
+  if ( !empty($_POST["test4"])  && (isset($_POST["test4"])) ) {
+    if (is_array($_POST['test4'])) {
+      $post["user_test4"] = implode(", ", $_POST["test4"]);
+    } else {
+      $post["user_test4"] = $_POST["test4"];
+    }
     $stack = array(
-      "key"   => "Высота ворот: ",
-      "value" => $post["user_range2"]
+      "key"   => "Вы уже применяли СЕО: ",
+      "value" => $post["user_test4"]
     );
     array_push($data, $stack);
   }
@@ -174,7 +164,7 @@
   $from = "no-repeat@" . HOST_NAME;
   $mail->SetFrom($from, HOST_NAME);
   $mail->AddAddress("Artem2431@gmail.com");
-  $mail->AddAddress("Marchik88@rambler.ru");
+  $mail->AddAddress("iborisbelov@gmail.com");
   $mail->isHTML(true);
   $mail->Subject      = HOST_NAME;
   $NewsLetterClass    = new NewsLetterClass();
@@ -182,10 +172,16 @@
   $mail->AltBody      = $body;
 
   if(!$mail->send()) {
-    echo "Что-то пошло не так. " . $mail->ErrorInfo;
-    return false;
+    $response = array(
+      'state'  => 200,
+      'error' => "Что-то пошло не так. " . $mail->ErrorInfo,
+    );
   } else {
-    header("Location: ../success.html");
-    return true;
+    $response = array(
+      'state'  => 200,
+      'message' => "Cообщение успешно отправлено.",
+    );
   }
+
+  echo json_encode($response);
 ?>
